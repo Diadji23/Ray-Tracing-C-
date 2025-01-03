@@ -6,7 +6,7 @@
     *@brief definit la taille de la grille/image ainsi que le nom du fichier ou on sauve l image
     *
     */
-   void scene::render(int width , int height , const std::string& outputFile) const {
+void scene::render(int width , int height , const std::string& outputFile) const {
     // Grille
     std::vector<std::vector<vector3f>> pixels(height , std::vector<Vector3f>(width)) ; 
 
@@ -23,6 +23,6 @@
         }
     }
 
-    save_image(pixels , outpuTFile) ; 
+save_image(pixels , outpuTFile) ; 
 
-   }
+}

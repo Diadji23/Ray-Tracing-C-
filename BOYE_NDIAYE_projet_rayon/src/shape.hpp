@@ -1,8 +1,8 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
-#include "Vector3f.h"
-#include "Ray3f.h"
+#include "vector3f.hpp"
+#include "ray3f.hpp"
 
 class Shape {
 public:

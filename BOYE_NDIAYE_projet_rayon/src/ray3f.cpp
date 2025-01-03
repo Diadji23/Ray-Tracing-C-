@@ -38,8 +38,3 @@ void test_param_constructor() {
 
 }
 
-int main() {
-    test_default_constructor() ;
-    test_param_constructor() ; 
-    return 0;
-}

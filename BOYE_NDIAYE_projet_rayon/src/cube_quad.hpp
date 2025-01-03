@@ -1,15 +1,34 @@
 #ifndef CUBE_QUAD_HPP
 #define CUBE_QUAD_HPP
 
+#include "shape.hpp"
+#include "vector3f.hpp"
+#include "ray3f.hpp"
+
+
+
+/*
+*@class Cub_quad 
+@brief Représente un quadrilatère dans un espace 3D
+*/
+
 
 class Cub_quad : public Shape{
-    public : 
-        Vector3f width_ ; 
-        Vector3f height_ ; 
-        Vector3f origin_ ;
     private : 
-        //constructeurs 
-        Cub_quad(Vector3f width , vector3f height ) ; 
+        Vector3f width_ ; // largeur du quad 
+        Vector3f height_ ; // longueur su quad 
+        Vector3f origin_ ; // origine du quad (un coin )
+        Material material_ ; // Materiau associé au quadrilatere
+    public : 
+         /**
+     * @brief Constructeur de Cub_quad.
+     * 
+     * @param origin Origine (coin inférieur gauche) du quadrilatère.
+     * @param width Largeur du quadrilatère.
+     * @param height Hauteur du quadrilatère.
+     * @param material Matériau du quadrilatère.
+     */
+        Cub_quad(const Vector3f& origin, const Vector3f& width ,const Vector3f&  height, const Material& material ) ; 
 
         ~Cub_quad() ; 
         /*
@@ -20,9 +39,14 @@ class Cub_quad : public Shape{
         */
         bool is_hit(const Ray3f& ray , float& t ) const override ; 
 
-        
+        /**
+        * @brief Retourne le matériau associé au quadrilatère.
+        * 
+        * @return Material Le matériau du quadrilatère.
+        */
+        Material get_material() const override ; 
     
 
 } ; 
 
-#endif ; 
+#endif 
