@@ -3,20 +3,75 @@
 
 #include <cmath>
 
+/**
+ * @class Vector3f
+ * @brief Représente un vecteur 3D.
+ * 
+ * Cette classe est utilisée pour manipuler des vecteurs 3D dans le cadre
+ * de calculs mathématiques liés au lancer de rayons.
+ */
+
 class Vector3f {
-public:
-    float x, y, z;
 
-    Vector3f();
-    Vector3f(float x, float y, float z);
 
+    private:
+
+    float x; //coordonnée 1
+    float y; //coordonnée 2
+    float z; //coordonnée 3
+
+    public:
+    /**
+     * @brief Constructeur par défaut.
+     * 
+     * Initialise le vecteur à (0, 0, 0).
+     */
+    Vector3f(float x = 0.0f, float y = 0.0f, float z = 0.0f);
+
+    /**
+     * @brief Additionne deux vecteurs.
+     * 
+     * @param other Le vecteur à ajouter.
+     * @return Un nouveau vecteur résultant de l'addition.
+     */
     Vector3f operator+(const Vector3f& other) const;
+
+    /**
+     * @brief Soustrait deux vecteurs.
+     * 
+     * @param other Le vecteur à soustraire.
+     * @return Un nouveau vecteur résultant de la soustraction.
+     */
     Vector3f operator-(const Vector3f& other) const;
+
+    /**
+     * @brief Multiplie le vecteur par un scalaire.
+     * 
+     * @param scalar Le scalaire par lequel multiplier.
+     * @return Un nouveau vecteur résultant de la multiplication.
+     */
     Vector3f operator*(float scalar) const;
+
+    /**
+     * @brief Calcule le produit scalaire avec un autre vecteur.
+     * 
+     * @param other Le vecteur avec lequel effectuer le produit scalaire.
+     * @return Le produit scalaire (un scalaire).
+     */
     float dot(const Vector3f& other) const;
-    Vector3f cross(const Vector3f& other) const;
-    float magnitude() const;
+
+    /**
+     * @brief Normalise le vecteur.
+     * 
+     * @return Un vecteur normalisé (de longueur 1).
+     */
     Vector3f normalize() const;
+    /**
+     * @brief calcul la norme du vecteur.
+     * 
+     * @return renvoie la norme du vecteur
+     */
+    float magnitude() const;
 };
 
 #endif
