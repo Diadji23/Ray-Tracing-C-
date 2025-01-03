@@ -6,9 +6,10 @@
 
 class Shape {
 public:
-    virtual bool isHit(const Ray3f& ray) const ;
-    virtual Vector3f reflect(const Ray3f& ray) const;
-    virtual ~Shape() {}
+    virtual bool is_hit(const Ray3f& ray, float& t) const = 0  ;
+    virtual ~Shape()  = 0 ;
 };
 
+
 #endif
+

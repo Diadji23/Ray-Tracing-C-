@@ -20,7 +20,7 @@ Vector3f Ray3f::point_at(float t) const {
 /**
  * @brief Teste le constructeur par défaut de Ray3f.
  */
-void test_default_constructor() {
+void test_default_constructor1() {
     Ray3f ray;
     std::cout << "Test constructeur par défaut:" << std::endl;
     std::cout << "Origine : (" << ray.point_at(0).x << ", " 
@@ -30,7 +30,7 @@ void test_default_constructor() {
 /**
  * @brief Teste le constructeur avec paramètres de Ray3f.
  */
-void test_param_constructor() {
+void test_param_constructor1() {
     Vector3f origin(1.0f, 2.0f, 3.0f);
     Vector3f direction(4.0f, 5.0f, 6.0f);
     Ray3f ray(origin, direction);

@@ -4,6 +4,7 @@
 #include "shape.hpp"
 #include "vector3f.hpp"
 #include "ray3f.hpp"
+#include "material.hpp"
 
 
 
@@ -14,10 +15,10 @@
 
 
 class Cub_quad : public Shape{
-    private : 
+    private :
+        Vector3f origin_ ; // origine du quad (un coin )
         Vector3f width_ ; // largeur du quad 
         Vector3f height_ ; // longueur su quad 
-        Vector3f origin_ ; // origine du quad (un coin )
         Material material_ ; // Materiau associé au quadrilatere
     public : 
          /**
@@ -44,7 +45,7 @@ class Cub_quad : public Shape{
         * 
         * @return Material Le matériau du quadrilatère.
         */
-        Material get_material() const override ; 
+       // Material get_material() const ; 
     
 
 } ; 

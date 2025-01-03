@@ -38,7 +38,7 @@ class Ray3f {
         */
         Ray3f(const Vector3f& origin , const Vector3f& direction) ;
 
-        ~Ray3f() ; 
+       virtual ~Ray3f() = default ; 
 
         //getters  d autres methodes ?   
         /**
@@ -50,6 +50,12 @@ class Ray3f {
     Vector3f point_at(float t) const ;
 
     
+
+
+    Vector3f get_origin() const { return origin_ ;}
+
+    Vector3f get_direction() const {return direction_ ; }
+
 } ;
 
 

@@ -2,8 +2,11 @@
 #define SCENE_HPP 
 #include <vector>
 #include <string>
-#include "Camera.hpp"
-#include "Material.hpp"
+#include "ray3f.hpp"
+#include "vector3f.hpp"
+#include "cube_quad.hpp"
+#include "camera.hpp"
+#include "material.hpp"
 
 
 
@@ -20,8 +23,8 @@
 class Scene
 {
 private:
-    camera camera_ ; 
-    std::vector<shape> object_ ;
+    Camera camera_ ; 
+    std::vector<Shape*> objects_ ;
     Ray3f source_ ; 
 
 public:
@@ -32,18 +35,34 @@ public:
     Scene();
     // getters , setters
 
+     /**
+     * @brief Ajoute un objet à la scène.
+     * @param shape Pointeur vers un objet dérivé de Shape.
+     */
+    void add_object(Shape* shape);
+
+
+
     /*
-    *ajoute une source de lumière sur la scene
+    *@brief ajoute une source de lumière sur la scene
     */
     void set_source(const Ray3f& source ); 
 
-    // permet d acceder a la source 
-    source& get_source() const ; 
 
-    // acceder à l ensemble des objets de la scene
-    std::vector<shape>& get_object() ; 
 
-    camera& get_camera(const camera& cam) ; 
+    /**
+     * @brief Retourne la source lumineuse de la scène.
+     * @return const Ray3f& La source lumineuse.
+     */
+    const Ray3f& get_source() const ; 
+
+    /**
+     * @brief Retourne les objets de la scène.
+     * @return const std::vector<Shape*>& Liste des objets de la scène.
+     */
+    const std::vector<shape*>& get_object() ; 
+
+    const Camera& get_camera(const Camera& cam) const; 
     
     //cette methode met en place une caméra pour notre scene
     void set_camera(const camera& cam ); 
@@ -59,29 +78,5 @@ public:
    void render(int width , int height , const std::string& outputFile) const ; 
 
 private : 
-    /**
-     * @brief suit un rayon dans la scene pour calculer sa couleur
-     * @param ray , le rayon à tracer 
-     * @return La couleur calculée au point d'intersection
-     */
-
-    Vector3f calcul_couleur(const Ray3f& ray) const {
-        Vector3f color(0.0f , 0.0f , 0.Of) ; 
-
-        float closest = std::numeric_limits<float>::max() ;
-
-        for ( const auto& obj : objects ) {
-            float t ; 
-            if(obj->is_hit(ray, t ) &&  t < closest) {
-                closest = t ; 
-                Vector3f hitPoint = ray.point_at(t) ;
-
-                color = compute_lighting(hitPoint)
-            }
-        }
-    }
-    
-   
-}
-
+}  
 #endif 
