@@ -1,6 +1,7 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
+<<<<<<< HEAD
 #include "Vector3f.hpp"
 #include "Ray3f.hpp"
 #include "materiel.hpp"
@@ -13,11 +14,13 @@
  * intersections et gérer les propriétés des formes spécifiques.
  */
 
+
 class Shape {
 private:
     Materiel matter; //matériau de la forme
 
 public:
+
     /**
      * @brief Teste si un rayon intersecte la forme.
      * 
@@ -26,7 +29,7 @@ public:
      * @return `true` si une intersection est trouvée, sinon `false`.
      */
 
-    virtual isHit(const Ray3f& ray) const ;
+    virtual isHit(const Ray3f& ray) const = 0;
 
     /**
      * @brief calcule le rayon réfléchie de ray.
@@ -34,8 +37,11 @@ public:
      * @param ray Le rayon dont on calcule le rayon réfléchie.
      * @return le rayon réfléchie
      */
-    virtual Vector3f reflect(const Ray3f& ray) const;
+    virtual Vector3f reflect(const Ray3f& ray) const = 0;
     virtual ~Shape() {}
+
 };
 
+
 #endif
+

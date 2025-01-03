@@ -1,0 +1,24 @@
+\doxysection{Cubu\+\_\+quad Class Reference}
+\hypertarget{classCubu__quad}{}\label{classCubu__quad}\index{Cubu\_quad@{Cubu\_quad}}
+
+
+Inheritance diagram for Cubu\+\_\+quad\+:
+% FIG 0
+
+
+Collaboration diagram for Cubu\+\_\+quad\+:
+% FIG 1
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCubu__quad_ae6a444a369460e5c5e067d47f831996f}\label{classCubu__quad_ae6a444a369460e5c5e067d47f831996f} 
+Vector3f {\bfseries width}
+\item 
+\Hypertarget{classCubu__quad_addbddf92bcc264728f5652b9c77a915a}\label{classCubu__quad_addbddf92bcc264728f5652b9c77a915a} 
+Vector3f {\bfseries height}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cube\+\_\+quad.\+hpp\end{DoxyCompactItemize}

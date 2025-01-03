@@ -1,11 +1,16 @@
-#ifdef RAY3F_HPP
+#ifndef RAY3F_HPP
 #define RAY3F_HPP
+#include <sstream> 
+
+#include <string>
 #include "vector3f.hpp"
 
 
 /**
  * @class Ray3f
- * @brief 
+ * @brief  représente un rayon dans un espace 3D 
+ * un rayon est défini par une origine et une direction 
+ * on normalise la direction pour garantir la precision des calculs
  * 
  */
 
@@ -15,10 +20,43 @@ class Ray3f {
         Vector3f direction_ ; 
 
     public : 
-        //constructeur et destructeur
-        Ray3f(const vector3f& origin , const vector3f& direction) ;
-        ~Ray3f() ; 
+        /**
+     *   @brief Constructeur par défaut.
+        *   
+        * Initialise un rayon avec une origine (0, 0, 0) et une direction (1, 0, 0).
+        */
+       Ray3f()  ; 
 
-        //getters  d autres methodes ?        
+
+        /**
+        * @brief Constructeur avec une origine et une direction.
+        * 
+        * La direction est automatiquement normalisée.
+        * 
+        * @param origin Origine du rayon.
+        * @param direction Direction du rayon (sera normalisée).
+        */
+        Ray3f(const Vector3f& origin , const Vector3f& direction) ;
+
+       virtual ~Ray3f() = default ; 
+
+        //getters  d autres methodes ?   
+        /**
+     * @brief Retourne un point à une distance donnée le long du rayon.
+     * 
+     * @param t Distance paramétrique le long du rayon.
+     * @return Vector3f Le point correspondant sur le rayon.
+     */
+    Vector3f point_at(float t) const ;
+
+    
+
+
+    Vector3f get_origin() const { return origin_ ;}
+
+    Vector3f get_direction() const {return direction_ ; }
+
 } ;
+
+
 #endif 

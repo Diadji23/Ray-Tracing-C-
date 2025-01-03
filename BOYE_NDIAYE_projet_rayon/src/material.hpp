@@ -1,25 +1,64 @@
-#ifdef MATERIAL_HPP 
+#ifndef MATERIAL_HPP 
 #define MATERIAL_HPP 
 
-/*
-*@class 
-**@brief 
-*
-*/
+
+#include "vector3f.hpp"
+
+/**
+ * @class Material
+ * @brief Représente les propriétés d'un matériau dans un espace 3D.
+ * 
+ * Un matériau est défini par une couleur (vecteur RGB) et une propriété
+ * de brillance (entre 0 et 1) pour les réflexions.
+ */
 
 class Material {
     private : 
-        vector3f color ; // vecteur (r , g , b)
-        float  shininess_ ; 
+        Vector3f color_ ; //couleur du materiau
+        float  shininess_ ; // brillance du materiau (entre 0 et 1 )
     public : 
+        /**
+        * @brief Constructeur par défaut.
+        * 
+        * Initialise un matériau noir (RGB = (0, 0, 0)) avec une brillance nulle.
+        */
         Material() ;
-        Material( const Vector3f color , float shininess) ;  
 
-        ~Material() ; 
+        /**
+        * @brief Constructeur avec paramètres.
+        * 
+        * @param color Couleur du matériau (vecteur RGB).
+        * @param shininess Brillance du matériau (doit être entre 0 et 1).
+        */
+        Material( const Vector3f& color , float shininess) ;  
 
-        //d autres methodes si necessaire 
         
+        /*
+        *@brief Accede à la couleur du materiau 
+        *@return Vector3f la couleur du materiau 
+        */
+        Vector3f get_color() const ; 
 
+        /**
+        * @brief Définit la couleur du matériau.
+        * @param color La nouvelle couleur (vecteur RGB).
+        */
+        void set_color(const Vector3f& color)  ; 
+    
+    
+        /**
+        * @brief Accède à la brillance du matériau.
+        * @return float La brillance (entre 0 et 1).
+        */
+        float get_shininess() const ;
+
+
+        /**
+        * @brief Définit la brillance du matériau.
+        * @param shininess La nouvelle brillance (doit être entre 0 et 1).
+        */
+        void set_shininess(float shininess);
+        
 }; 
 
 

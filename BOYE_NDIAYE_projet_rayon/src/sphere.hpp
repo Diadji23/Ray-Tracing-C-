@@ -22,24 +22,6 @@ public:
      * @param material Le matériau de la sphère.
      */
     Sphere(const Vector3f& center, float radius, const Material& material);
-
-    /**
-     * @brief Teste si un rayon intersecte la sphère.
-     * 
-     * @param ray Le rayon à tester.
-     * @param hitPoint Le point d'intersection, si trouvé.
-     * @return `true` si une intersection est trouvée, sinon `false`.
-     */
-    bool isHit(const Ray3f& ray, float& t) const override;
-    
-    /**
-     * @brief Teste si un rayon intersecte la sphère.
-     * 
-     * @param ray Le rayon à tester.
-     * @param hitPoint Le point d'intersection, si trouvé.
-     * @return `true` si une intersection est trouvée, sinon `false`.
-     */
-    Vector3f reflect(const Ray3f& ray, const Vector3f& point) const override;
 };
 
 #endif

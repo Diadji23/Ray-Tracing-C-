@@ -1,8 +1,9 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "Vector3f.h"
+#include "vector3f.hpp"
 
+<<<<<<< HEAD
 /**
  * @class Camera
  * @brief Représente une caméra dans la scène.
@@ -22,7 +23,18 @@ public:
      * @param position Position de la caméra.
      * @param direction Direction dans laquelle la caméra regarde.
      */
+=======
+class Camera {
+public:
+    Vector3f position_;
+    Vector3f direction_;
+private :
+    Camera() ; 
+>>>>>>> bbce886164e2b057a433b81debe33fefc9e5e6ab
     Camera(const Vector3f& position, const Vector3f& direction);
+    //
+  
+
 };
 
 #endif

@@ -13,6 +13,12 @@
 
 class Vector3f {
 
+<<<<<<< HEAD:BOYE_NDIAYE_projet_rayon/src/vector3F.hpp
+=======
+    Vector3f();
+    
+    Vector3f(float x, float y, float z);
+>>>>>>> bbce886164e2b057a433b81debe33fefc9e5e6ab:BOYE_NDIAYE_projet_rayon/src/vector3f.hpp
 
     private:
 
@@ -26,7 +32,17 @@ class Vector3f {
      * 
      * Initialise le vecteur à (0, 0, 0).
      */
-    Vector3f(float x = 0.0f, float y = 0.0f, float z = 0.0f);
+    Vector3f();
+
+    /**
+     * @brief Constructeur
+     * 
+     *@param x coordonnée 1 du vecteur
+     *@param y coordonnée 2 du vecteur
+     *@param Z coordonnée 3 du vecteur
+     * Initialise le vecteur à (0, 0, 0).
+     */
+    Vector3f(float x, float y, float z);
 
     /**
      * @brief Additionne deux vecteurs.
