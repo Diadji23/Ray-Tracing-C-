@@ -12,8 +12,6 @@
 
 
 
-
-
 /**@class Scene
  * @brief represente une scene avec une caméra , des objets , et une source 
  * elle gere tous les éléments nécessaires pour produire une image

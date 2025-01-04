@@ -3,7 +3,6 @@
 
 #include "vector3f.hpp"
 
-<<<<<<< HEAD
 /**
  * @class Camera
  * @brief Représente une caméra dans la scène.

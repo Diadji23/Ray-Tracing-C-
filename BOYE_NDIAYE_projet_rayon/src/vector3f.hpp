@@ -13,13 +13,8 @@
 
 class Vector3f {
 
-<<<<<<< HEAD:BOYE_NDIAYE_projet_rayon/src/vector3F.hpp
-=======
-    Vector3f();
-    
-    Vector3f(float x, float y, float z);
->>>>>>> bbce886164e2b057a433b81debe33fefc9e5e6ab:BOYE_NDIAYE_projet_rayon/src/vector3f.hpp
 
+   
     private:
 
     float x; //coordonnée 1
