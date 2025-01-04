@@ -13,13 +13,6 @@
 
 class Vector3f {
 
-<<<<<<< HEAD:BOYE_NDIAYE_projet_rayon/src/vector3F.hpp
-=======
-    Vector3f();
-    
-    Vector3f(float x, float y, float z);
->>>>>>> bbce886164e2b057a433b81debe33fefc9e5e6ab:BOYE_NDIAYE_projet_rayon/src/vector3f.hpp
-
     private:
 
     float x; //coordonnée 1
@@ -43,6 +36,27 @@ class Vector3f {
      * Initialise le vecteur à (0, 0, 0).
      */
     Vector3f(float x, float y, float z);
+
+    /**
+     * @brief Obtient la coordonnée X du vecteur.
+     * 
+     * @return La coordonnée X.
+     */
+    float getX() const;
+
+    /**
+     * @brief Obtient la coordonnée Y du vecteur.
+     * 
+     * @return La coordonnée Y.
+     */
+    float getY() const;
+
+    /**
+     * @brief Obtient la coordonnée Z du vecteur.
+     * 
+     * @return La coordonnée Z.
+     */
+    float getZ() const;
 
     /**
      * @brief Additionne deux vecteurs.
