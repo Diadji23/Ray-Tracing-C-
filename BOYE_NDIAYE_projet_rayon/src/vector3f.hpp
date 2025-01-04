@@ -13,8 +13,11 @@
 
 class Vector3f {
 
+<<<<<<< HEAD
 
    
+=======
+>>>>>>> 65c909a95f225919aa738dcfac8fa62305a40f90
     private:
 
     float x; //coordonnée 1
@@ -38,6 +41,27 @@ class Vector3f {
      * Initialise le vecteur à (0, 0, 0).
      */
     Vector3f(float x, float y, float z);
+
+    /**
+     * @brief Obtient la coordonnée X du vecteur.
+     * 
+     * @return La coordonnée X.
+     */
+    float getX() const;
+
+    /**
+     * @brief Obtient la coordonnée Y du vecteur.
+     * 
+     * @return La coordonnée Y.
+     */
+    float getY() const;
+
+    /**
+     * @brief Obtient la coordonnée Z du vecteur.
+     * 
+     * @return La coordonnée Z.
+     */
+    float getZ() const;
 
     /**
      * @brief Additionne deux vecteurs.
