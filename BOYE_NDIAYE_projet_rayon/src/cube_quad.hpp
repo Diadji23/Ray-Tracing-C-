@@ -31,23 +31,23 @@ class Cub_quad : public Shape{
      */
         Cub_quad(const Vector3f& origin, const Vector3f& width ,const Vector3f&  height, const Material& material ) ; 
 
-        ~Cub_quad() ; 
         /*
         *@brief vérifie si un rayon intersecte un quadrilatère défini dans un plan
         @param ray Le rayon à tester 
         @param t Distance à l'intersection , si elle existe
         @ true si intersection , false sinon
         */
-        bool is_hit(const Ray3f& ray , float& t ) const override ; 
+        bool isHit(const Ray3f& ray , float& t ) const override ; 
 
         /**
         * @brief Retourne le matériau associé au quadrilatère.
         * 
         * @return Material Le matériau du quadrilatère.
-        */
-       // Material get_material() const ; 
-    
+        */ 
+        Material get_material() const override;
 
-} ; 
+        Vector3f reflect(const Ray3f& ray, const Vector3f& point) const override ; 
+         
+} ;     
 
 #endif 

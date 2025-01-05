@@ -2,7 +2,7 @@
 #include "sdl.hpp"
 
 #include "scene.hpp"
-#include "cub_quad.hpp"
+#include "cube_quad.hpp"
 
 #include "material.hpp"
 #include "sphere.hpp"
@@ -26,7 +26,9 @@ int main(){
 
     //configurer la caméra
 
-    Camera camera(Vector3f(0.0f ,1.0f , 5.0f), Vector3f(0.0f, -1.0f , 0.0f)) ;
+    Camera camera(Vector3f(0.0f ,1.0f , 5.0f), Vector3f(0.0f, 0.0f , -1.0f)) ;
+    //angle de la caméra 
+    camera.set_camera_angle(45.0f, -15.0f) ;
     scene.set_camera(camera) ; 
 
 
@@ -34,9 +36,6 @@ int main(){
     Ray3f light_source(Vector3f(0.0f, box_size, 0.0f), Vector3f(0.0f, -1.0f, 0.0f));
     scene.set_source(light_source);
 
-
-    // Dimensions de la boîte
-    float box_size = 10.0f;
 
     // Matériaux pour les objets
     Material red(Vector3f(1.0f, 0.0f, 0.0f), 0.5f);
@@ -47,7 +46,7 @@ int main(){
 
     // Quadrilatères pour la boîte
     Cub_quad left(Vector3f(-box_size, -box_size, -box_size), Vector3f(0.0f, 2 * box_size, 0.0f), Vector3f(0.0f, 0.0f, 2 * box_size), gray);
-    Cub_quad right(Vector3f6(box_size, -box_size, -box_size), Vector3f(0.0f, 2 * box_size, 0.0f), Vector3f(0.0f, 0.0f, 2 * box_size), gray);
+    Cub_quad right(Vector3f(box_size, -box_size, -box_size), Vector3f(0.0f, 2 * box_size, 0.0f), Vector3f(0.0f, 0.0f, 2 * box_size), gray);
     Cub_quad bottom(Vector3f(-box_size, -box_size, -box_size), Vector3f(2 * box_size, 0.0f, 0.0f), Vector3f(0.0f, 0.0f, 2 * box_size), white);
     Cub_quad top(Vector3f(-box_size, box_size, -box_size), Vector3f(2 * box_size, 0.0f, 0.0f), Vector3f(0.0f, 0.0f, 2 * box_size), white);
     Cub_quad back(Vector3f(-box_size, -box_size, box_size), Vector3f(2 * box_size, 0.0f, 0.0f), Vector3f(0.0f, 2 * box_size, 0.0f), gray);
@@ -66,11 +65,13 @@ int main(){
     Sphere sphere(Vector3f(0.0f, -5.0f, 0.0f), 3.0f, Material(Vector3f(1.0f, 0.0f, 0.0f), 0.7f));
     scene.add_object(&sphere);
 
-
+  // Générer l'image (matrice de couleurs)
+    std::vector<std::vector<Vector3f>> image(height, std::vector<Vector3f>(width));
+    scene.render_to_image(width, height, image);
 
   //afficher l'image avec sdl 
 
-  while( sdl.handle_envents()){
+  while( sdl.handle_events()){
     sdl.render(image) ; 
   }
 

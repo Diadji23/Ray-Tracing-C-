@@ -1,11 +1,13 @@
-Sphere::Sphere(const Vector3f& origin, float radius) : origin(origin), radius(radius) {}
+#include "sphere.hpp"
+
+Sphere::Sphere(const Vector3f& origin, float radius, const Material& material) : origin_(origin), radius_(radius) , material_(material){}
 
 //utilisation de l'equation quadratique
 bool Sphere::isHit(const Ray3f& ray, float& t) const {
-    Vector3f oc = ray.origin - origin;
-    float a = ray.direction.dot(ray.direction);
-    float b = 2.0f * oc.dot(ray.direction);
-    float c = oc.dot(oc) - radius * radius;
+    Vector3f oc = ray.get_origin() - origin_;
+    float a = ray.get_direction().dot(ray.get_direction());
+    float b = 2.0f * oc.dot(ray.get_direction());
+    float c = oc.dot(oc) - radius_ * radius_;
     float discriminant = b * b - 4 * a * c;
 
     if (discriminant < 0) {
@@ -16,8 +18,13 @@ bool Sphere::isHit(const Ray3f& ray, float& t) const {
     }
 }
 
+Material Sphere::get_material() const {
+    return material_ ; 
+}
+
 //formule de réflexion
 Vector3f Sphere::reflect(const Ray3f& ray, const Vector3f& point) const {
-    Vector3f normal = (point - origin).normalize();
-    return ray.direction - normal * 2.0f * ray.direction.dot(normal);
+    Vector3f normal = (point - origin_).normalize();
+    return ray.get_direction() - normal * 2.0f * ray.get_direction().dot(normal);
 }
+

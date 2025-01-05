@@ -36,9 +36,10 @@ void Material::set_shininess(float shininess) {
 
 void test_default_constructor() {
     Material material;
+
     std::cout << "Test constructeur par défaut:" << std::endl;
-    std::cout << "Couleur : (" << material.get_color().x << ", " 
-              << material.get_color().y << ", " << material.get_color().z << ")" << std::endl;
+    std::cout << "Couleur : (" << material.get_color().getX() << ", " 
+              << material.get_color().getY() << ", " << material.get_color().getZ() << ")" << std::endl;
     std::cout << "Brillance : " << material.get_shininess() << std::endl << std::endl;
 }
 
@@ -47,22 +48,24 @@ void test_param_constructor() {
     Vector3f color(0.5f, 0.2f, 0.8f);
     float shininess = 0.7f;
     Material material(color, shininess);
+    
 
     std::cout << "Test constructeur avec paramètres:" << std::endl;
-    std::cout << "Couleur : (" << material.get_color().x << ", " 
-              << material.get_color().y << ", " << material.get_color().z << ")" << std::endl;
+    std::cout << "Couleur : (" << material.get_color().getX() << ", " 
+              << material.get_color().getY()<< ", " << material.get_color().getZ() << ")" << std::endl;
     std::cout << "Brillance : " << material.get_shininess() << std::endl << std::endl;
 }
 
 
 void test_setters() {
     Material material;
+    
     material.set_color(Vector3f(1.0f, 0.0f, 0.0f));
     material.set_shininess(0.9f);
 
     std::cout << "Test des setters:" << std::endl;
-    std::cout << "Couleur : (" << material.get_color().x << ", " 
-              << material.get_color().y << ", " << material.get_color().z << ")" << std::endl;
+    std::cout << "Couleur : (" << material.get_color().getX() << ", " 
+              << material.get_color().getY() << ", " << material.get_color().getZ() << ")" << std::endl;
     std::cout << "Brillance : " << material.get_shininess() << std::endl << std::endl;
 }
 

@@ -12,10 +12,11 @@
  */
 class Sdl {
 private:
-    SDL_Window* window_;       // Fenêtre SDL.
-    SDL_Renderer* renderer_;   // Renderer SDL.
+       // Renderer SDL.
     int width_;                //Largeur de l'image.
-    int height_;               // Hauteur de l'image.
+    int height_;  
+    SDL_Window* window_;       // Fenêtre SDL.
+    SDL_Renderer* renderer_;             // Hauteur de l'image.
 
 public:
     /**

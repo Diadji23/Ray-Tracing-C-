@@ -41,9 +41,9 @@ void Sdl::render(const std::vector<std::vector<Vector3f>>& image) {
         for (int x = 0; x < width_; ++x) {
             const Vector3f& color = image[y][x];
             SDL_SetRenderDrawColor(renderer_,
-                                   static_cast<Uint8>(color.x * 255),
-                                   static_cast<Uint8>(color.y * 255),
-                                   static_cast<Uint8>(color.z * 255),
+                                   static_cast<Uint8>(color.getX() * 255),
+                                   static_cast<Uint8>(color.getY() * 255),
+                                   static_cast<Uint8>(color.getZ() * 255),
                                    255);
             SDL_RenderDrawPoint(renderer_, x, height_ - y - 1);
         }
@@ -63,5 +63,4 @@ bool Sdl::handle_events() {
     }
     return true;
 }
-
 

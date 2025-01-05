@@ -4,7 +4,6 @@
 
 
 
-
 Ray3f::Ray3f() : origin_(0.0f, 0.0f, 0.0f), direction_(1.0f, 0.0f, 0.0f) {}
 
    
@@ -23,8 +22,8 @@ Vector3f Ray3f::point_at(float t) const {
 void test_default_constructor1() {
     Ray3f ray;
     std::cout << "Test constructeur par défaut:" << std::endl;
-    std::cout << "Origine : (" << ray.point_at(0).x << ", " 
-              << ray.point_at(0).y << ", " << ray.point_at(0).z << ")" << std::endl;
+    std::cout << "Origine : (" << ray.point_at(0).getX()  << ", " 
+              << ray.point_at(0).getY() << ", " << ray.point_at(0).getZ() << ")" << std::endl;
 }
 
 /**

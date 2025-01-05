@@ -13,11 +13,6 @@
 
 class Vector3f {
 
-<<<<<<< HEAD
-
-   
-=======
->>>>>>> 65c909a95f225919aa738dcfac8fa62305a40f90
     private:
 
     float x; //coordonnée 1
@@ -95,6 +90,10 @@ class Vector3f {
      */
     float dot(const Vector3f& other) const;
 
+
+
+    Vector3f cross(const Vector3f& other) const ;
+
     /**
      * @brief Normalise le vecteur.
      * 
@@ -107,6 +106,14 @@ class Vector3f {
      * @return renvoie la norme du vecteur
      */
     float magnitude() const;
+
+
+
+
+    // Setters pour les composantes x, y, et z
+     void set_x(float new_x) { x = new_x; } 
+    void set_y(float new_y) { y = new_y; }
+     void set_z(float new_z) { z = new_z; }
 };
 
 #endif
