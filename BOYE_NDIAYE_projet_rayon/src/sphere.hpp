@@ -23,7 +23,7 @@ public:
      */
     Sphere(const Vector3f& origin, float radius, const Material& material) ;
 
-    bool isHit(const Ray3f& ray, float& t) const override; 
+    bool isHit(const Ray3f& ray, float& t, Vector3f& intersection_point, Vector3f& normal) const override; 
 
     Material get_material() const override;
 
@@ -31,6 +31,10 @@ public:
     Vector3f reflect(const Ray3f& ray, const Vector3f& point) const override ; 
 
 
+    Vector3f get_origin() const override ;
+    Vector3f get_height() const override ;
+    Vector3f get_width() const override ; 
+    
 };
 
 #endif

@@ -37,7 +37,7 @@ class Cub_quad : public Shape{
         @param t Distance à l'intersection , si elle existe
         @ true si intersection , false sinon
         */
-        bool isHit(const Ray3f& ray , float& t ) const override ; 
+        bool isHit(const Ray3f& ray, float& t, Vector3f& intersection_point, Vector3f& normal) const override ; 
 
         /**
         * @brief Retourne le matériau associé au quadrilatère.
@@ -48,6 +48,10 @@ class Cub_quad : public Shape{
 
         Vector3f reflect(const Ray3f& ray, const Vector3f& point) const override ; 
          
-} ;     
+        Vector3f get_origin() const override ;
 
+        Vector3f get_height() const override ;
+        Vector3f get_width() const override ;
+       
+} ;
 #endif 

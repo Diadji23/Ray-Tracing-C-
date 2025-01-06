@@ -14,7 +14,10 @@
 
 class Material {
     private : 
-        Vector3f color_ ; //couleur du materiau
+        Vector3f ka_; // Coefficient de réflexion ambiante
+        Vector3f kd_; // Coefficient de réflexion diffuse
+        Vector3f ks_; // Coefficient de réflexion spéculaire
+        //Vector3f color_ ; //couleur du materiau
         float  shininess_ ; // brillance du materiau (entre 0 et 1 )
     public : 
         /**
@@ -58,6 +61,15 @@ class Material {
         * @param shininess La nouvelle brillance (doit être entre 0 et 1).
         */
         void set_shininess(float shininess);
+
+        //nouveau 
+        Vector3f get_ambient() const ; 
+        Vector3f get_diffuse() const  ;
+        void set_ambient(const Vector3f& ka) ; 
+        Vector3f get_specular() const ; 
+        void set_specular( const Vector3f& ks) ; 
+         
+        void set_diffuse( const Vector3f& kd) ; 
         
 }; 
 

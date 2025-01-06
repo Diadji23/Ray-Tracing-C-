@@ -82,6 +82,8 @@ class Vector3f {
      */
     Vector3f operator*(float scalar) const;
 
+    ;
+
     /**
      * @brief Calcule le produit scalaire avec un autre vecteur.
      * 
@@ -113,7 +115,13 @@ class Vector3f {
     // Setters pour les composantes x, y, et z
      void set_x(float new_x) { x = new_x; } 
     void set_y(float new_y) { y = new_y; }
-     void set_z(float new_z) { z = new_z; }
+     void set_z(float new_z) { z = new_z; } 
+    Vector3f operator*(const Vector3f& vec) const;
+    Vector3f& clamp(float min_val, float max_val);
+    friend Vector3f operator*(float scalar, const Vector3f& vec);
 };
+//a supprimer 
+//  la multiplication scalaire en dehors de la classe
+
 
 #endif

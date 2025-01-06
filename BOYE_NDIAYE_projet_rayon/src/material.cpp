@@ -3,22 +3,22 @@
 #include <iostream>
 
 
-Material::Material() : color_(0.0f, 0.0f, 0.0f), shininess_(0.0f) {}
+//Material::Material() : color_(0.0f, 0.0f, 0.0f), shininess_(0.0f) {}
+Material::Material()
+        : ka_(0.0f, 0.0f, 0.0f), kd_(0.0f, 0.0f, 0.0f), ks_(0.0f, 0.0f, 0.0f), shininess_(0.0f) {}
 
-
-Material::Material(const Vector3f& color, float shininess)
-    : color_(color), shininess_(std::clamp(shininess, 0.0f, 1.0f)){}
-
+//Material::Material(const Vector3f& color, float shininess)
+   // : color_(color), shininess_(std::clamp(shininess, 0.0f, 1.0f)){}
 
 
 
 //methodes 
 
 
-Vector3f Material::get_color() const { return color_; }
+//Vector3f Material::get_color() const { return color_; }
 
 
-void Material::set_color(const Vector3f& color) { color_ = color; }
+//void Material::set_color(const Vector3f& color) { color_ = color; }
 
 
 float Material::get_shininess() const { return shininess_; }
@@ -34,39 +34,16 @@ void Material::set_shininess(float shininess) {
     shininess_ = std::clamp(shininess, 0.0f, 1.0f); // Brillance limitée entre 0 et 1
 }
 
-void test_default_constructor() {
-    Material material;
+Vector3f Material::get_ambient() const {
+     return ka_ ; 
+     }
 
-    std::cout << "Test constructeur par défaut:" << std::endl;
-    std::cout << "Couleur : (" << material.get_color().getX() << ", " 
-              << material.get_color().getY() << ", " << material.get_color().getZ() << ")" << std::endl;
-    std::cout << "Brillance : " << material.get_shininess() << std::endl << std::endl;
-}
+void Material::set_ambient(const Vector3f& ka) { ka_ = ka; }
 
+Vector3f Material::get_diffuse() const { return kd_; }
 
-void test_param_constructor() {
-    Vector3f color(0.5f, 0.2f, 0.8f);
-    float shininess = 0.7f;
-    Material material(color, shininess);
-    
+void Material::set_diffuse(const Vector3f& kd) { kd_ = kd; }
 
-    std::cout << "Test constructeur avec paramètres:" << std::endl;
-    std::cout << "Couleur : (" << material.get_color().getX() << ", " 
-              << material.get_color().getY()<< ", " << material.get_color().getZ() << ")" << std::endl;
-    std::cout << "Brillance : " << material.get_shininess() << std::endl << std::endl;
-}
+Vector3f Material::get_specular() const { return ks_; }
 
-
-void test_setters() {
-    Material material;
-    
-    material.set_color(Vector3f(1.0f, 0.0f, 0.0f));
-    material.set_shininess(0.9f);
-
-    std::cout << "Test des setters:" << std::endl;
-    std::cout << "Couleur : (" << material.get_color().getX() << ", " 
-              << material.get_color().getY() << ", " << material.get_color().getZ() << ")" << std::endl;
-    std::cout << "Brillance : " << material.get_shininess() << std::endl << std::endl;
-}
-
-
+void Material::set_specular(const Vector3f& ks) { ks_ = ks; }

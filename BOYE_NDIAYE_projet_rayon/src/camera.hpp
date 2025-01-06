@@ -15,6 +15,7 @@ class Camera {
 private:
     Vector3f position_; //position de la caméra
     Vector3f direction_; //direction 
+    float fov_ ; // 
 public:
 
     /**
@@ -40,7 +41,9 @@ public:
      */
     void set_direction(const Vector3f& direction); 
 
+    Vector3f get_position() const ; 
 
+    void set_fov(float fov_degrees) ;
     /**
      * @brief Génère un rayon pour un pixel donné.
      * @param x Position horizontale du pixel.

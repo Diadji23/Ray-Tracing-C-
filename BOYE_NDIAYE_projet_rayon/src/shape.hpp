@@ -25,7 +25,7 @@ public:
      * @return `true` si une intersection est trouvée, sinon `false`.
      */
 
-    virtual bool  isHit(const Ray3f& ray, float& t) const = 0;
+    virtual bool  isHit(const Ray3f& ray, float& t, Vector3f& intersection_point, Vector3f& normal) const = 0;
 
     /**
      * @brief Retourne le matériau associé à la forme.
@@ -40,7 +40,10 @@ public:
      * @return le rayon réfléchie
      */
     virtual Vector3f reflect(const Ray3f& ray, const Vector3f& point) const = 0; 
-
+    virtual Vector3f get_origin() const = 0;
+    virtual Vector3f get_height() const= 0;
+    
+    virtual  Vector3f get_width() const = 0 ;
 
     virtual ~Shape()= default ; 
 };

@@ -13,9 +13,9 @@
 #include "camera.hpp"
 #include "material.hpp"
 
+#include "sphere.hpp"
 
-
-
+#include "light.hpp"
 
 /**@class Scene
  * @brief represente une scene avec une caméra , des objets , et une source 
@@ -29,6 +29,8 @@ private:
     Camera camera_ ; 
     std::vector<Shape*> objects_ ;
     Ray3f source_ ; 
+    std::vector<Light> lights_;
+
 
 public:
     /*
@@ -77,7 +79,7 @@ public:
     const Camera& get_camera(const Camera& cam) const; 
     
     
-
+    void add_light(const Light& light); 
     // methodes autres 
 
 public:

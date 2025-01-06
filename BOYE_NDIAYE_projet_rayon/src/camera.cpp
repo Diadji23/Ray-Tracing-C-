@@ -1,5 +1,5 @@
 #include "camera.hpp"
-
+#include <cmath>
 // Fonction pour convertir les degrés en radians
 inline float radians(float degrees) { 
     return degrees * static_cast<float>(M_PI) / 180.0f; }
@@ -7,13 +7,13 @@ inline float radians(float degrees) {
 
 //constructeur par défaut 
 Camera::Camera()
-    : position_(0.0f, 0.0f, 0.0f), direction_(0.0f, 0.0f, -1.0f) {}
+    : position_(0.0f, 0.0f, 0.0f), direction_(0.0f, 0.0f, -1.0f), fov_(radians(60.0f)) {}
 
 
 //constructeur valué 
 
 Camera::Camera(const Vector3f& position, const Vector3f& direction)
-    : position_(position), direction_(direction.normalize()) {}  
+    : position_(position), direction_(direction.normalize()) , fov_(radians(60.0f)){}  
 
 //setters , getters 
 
@@ -42,14 +42,31 @@ Ray3f Camera::generate_ray(int x, int y, int width, int height) const {
     float u = (2.0f * (x + 0.5f) / static_cast<float>(width)) - 1.0f;
     float v = (2.0f * (y + 0.5f) / static_cast<float>(height)) - 1.0f;
 
-    // Ajuster pour un champ de vision (FOV) simple
     float aspect_ratio = static_cast<float>(width) / static_cast<float>(height);
-    u *= aspect_ratio;
+
+    // Ajuster pour le FOV
+    float scale = std::tan(fov_ / 2.0f);
+    u *= aspect_ratio * scale;
+    v *= scale;
+
+    
+    // Système de coordonnées local de la caméra
+    Vector3f right = direction_.cross(Vector3f(0.0f, 1.0f, 0.0f)).normalize(); // Axe X local
+    Vector3f up = right.cross(direction_).normalize();
 
     // Direction du rayon (le plan d'image est centré devant la caméra)
-    Vector3f ray_direction = (direction_ + Vector3f(u, v, -1.0f)).normalize();
+    Vector3f ray_direction = (direction_ + right * u + up * v).normalize();
 
     // Retourne le rayon
     return Ray3f(position_, ray_direction);
 }
 
+void Camera::set_fov(float fov_degrees) {
+    fov_ = radians(fov_degrees);
+}
+
+
+
+Vector3f Camera::get_position() const {
+    return position_ ; 
+};

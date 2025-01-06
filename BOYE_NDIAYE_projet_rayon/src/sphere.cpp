@@ -3,6 +3,8 @@
 Sphere::Sphere(const Vector3f& origin, float radius, const Material& material) : origin_(origin), radius_(radius) , material_(material){}
 
 //utilisation de l'equation quadratique
+
+/*
 bool Sphere::isHit(const Ray3f& ray, float& t) const {
     Vector3f oc = ray.get_origin() - origin_;
     float a = ray.get_direction().dot(ray.get_direction());
@@ -13,10 +15,66 @@ bool Sphere::isHit(const Ray3f& ray, float& t) const {
     if (discriminant < 0) {
         return false; // No intersection
     } else {
-        t = (-b - std::sqrt(discriminant)) / (2.0f * a);
-        return t > 0; // Intersection exists if t > 0
+        float num =  std::sqrt(discriminant) ;
+        float t1 = (- b - num )/ (2.0f * a) ; 
+        float t2 = (- b + num )/ (2.0f * a) ; 
+        if( t1 < 0.0f || t2 < 0.0f){
+            return false ; 
+
+        }
+        else{
+            if (t1 > 0 && t2 > 0){
+                t= std::min(t1, t2) ; 
+                return true ; 
+            }else if (t1 > 0){
+                t = t1 ; 
+                return true ; 
+            }
+            else if (t2 > 0){
+                t = t2 ;
+                return true ;  
+            }
+        }
+        
     }
+    return false ; 
 }
+
+*/
+
+bool Sphere::isHit(const Ray3f& ray, float& t, Vector3f& intersection_point, Vector3f& normal) const {
+    Vector3f oc = ray.get_origin() - origin_; // Vecteur entre le centre de la sphère et l'origine du rayon
+
+    float a = ray.get_direction().dot(ray.get_direction());
+    float b = 2.0f * oc.dot(ray.get_direction());
+    float c = oc.dot(oc) - radius_ * radius_;
+
+    float discriminant = b * b - 4 * a * c;
+
+    if (discriminant < 0) {
+        return false; // Pas d'intersection
+    }
+
+    // Calcul des racines de l'équation quadratique
+    float sqrt_discriminant = std::sqrt(discriminant);
+    float t1 = (-b - sqrt_discriminant) / (2.0f * a);
+    float t2 = (-b + sqrt_discriminant) / (2.0f * a);
+
+    // Choisir la plus proche intersection dans la direction du rayon
+    if (t1 > 1e-6) {
+        t = t1;
+    } else if (t2 > 1e-6) {
+        t = t2;
+    } else {
+        return false; // Les intersections sont derrière le rayon
+    }
+
+    // Calcul du point d'intersection et de la normale
+    intersection_point = ray.get_origin() + t * ray.get_direction();
+    normal = (intersection_point - origin_).normalize(); // Normale pointant vers l'extérieur
+    return true;
+}
+
 
 Material Sphere::get_material() const {
     return material_ ; 
@@ -28,3 +86,13 @@ Vector3f Sphere::reflect(const Ray3f& ray, const Vector3f& point) const {
     return ray.get_direction() - normal * 2.0f * ray.get_direction().dot(normal);
 }
 
+Vector3f Sphere::get_origin() const{
+    return origin_ ; 
+}
+
+Vector3f Sphere::get_height() const {
+    return Vector3f(0.0f, 0.0f , 0.0f) ; 
+};
+Vector3f Sphere::get_width() const {
+    return Vector3f(0.0f, 0.0f , 0.0f) ; 
+} ; 
