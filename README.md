@@ -16,7 +16,7 @@ Ce projet implémente un moteur simple de **lancer de rayons** permettant de gé
 - `ray3f.cpp` / `ray3f.hpp` : Classe `Ray3f` représentant un rayon 3D.
 - `sdl.cpp` / `sdl.hpp` : Utilisation de SDL2 pour afficher l’image générée.
 
-## 🖥 Compilation
+##  Compilation
 
 ### Prérequis
 
@@ -40,4 +40,4 @@ g++ -g -Wall -Wextra -o prog *.cpp $(pkg-config --cflags --libs sdl2)
 
 ## Projet réalisé dans un cadre académique ( Cours C++ ENSIIE)
 
-##
+
