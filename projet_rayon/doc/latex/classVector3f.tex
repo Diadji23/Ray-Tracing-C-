@@ -1,0 +1,243 @@
+\doxysection{Vector3f Class Reference}
+\hypertarget{classVector3f}{}\label{classVector3f}\index{Vector3f@{Vector3f}}
+
+
+Représente un vecteur 3D.  
+
+
+
+
+{\ttfamily \#include $<$vector3f.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVector3f_a1b14b77d2503c1b1ca1363163ff55432}{Vector3f}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3f_a71033a308401bb8950d846a012d13da8}{Vector3f}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classVector3f_a76759eb4a7879906441ed9ad7385e4c3}{getX}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la coordonnée X du vecteur. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classVector3f_a2cf82f229b7d7d5398d7c9fd453a0fbc}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la coordonnée Y du vecteur. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classVector3f_a0a87d639c7172d1c9eea7fac74f5e6ae}{getZ}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la coordonnée Z du vecteur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \mbox{\hyperlink{classVector3f_aed35d6f067aa95eb8d809403b763b1b4}{operator+}} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&other) const
+\begin{DoxyCompactList}\small\item\em Additionne deux vecteurs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \mbox{\hyperlink{classVector3f_a0ed76726faa48d506513168b64481d52}{operator-\/}} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&other) const
+\begin{DoxyCompactList}\small\item\em Soustrait deux vecteurs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \mbox{\hyperlink{classVector3f_a2311608a5a05790838264f552dea72eb}{operator\texorpdfstring{$\ast$}{*}}} (float scalar) const
+\begin{DoxyCompactList}\small\item\em Multiplie le vecteur par un scalaire. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classVector3f_a7f46374a269ea4747c60e5eb1e1dc289}{dot}} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&other) const
+\begin{DoxyCompactList}\small\item\em Calcule le produit scalaire avec un autre vecteur. \end{DoxyCompactList}\item 
+\Hypertarget{classVector3f_ab784168f1da328739bb2ad65dbd2f4f9}\label{classVector3f_ab784168f1da328739bb2ad65dbd2f4f9} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries cross} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&other) const
+\item 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \mbox{\hyperlink{classVector3f_ad0a7aee39e7423d2261931b08d98b12e}{normalize}} () const
+\begin{DoxyCompactList}\small\item\em Normalise le vecteur. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classVector3f_add91fe15e5acc01b2724bf4b9628a638}{magnitude}} () const
+\begin{DoxyCompactList}\small\item\em calcul la norme du vecteur. \end{DoxyCompactList}\item 
+\Hypertarget{classVector3f_a56dbcea6d73240960678ac1616e916b5}\label{classVector3f_a56dbcea6d73240960678ac1616e916b5} 
+void {\bfseries set\+\_\+x} (float new\+\_\+x)
+\begin{DoxyCompactList}\small\item\em change la valeur de x \end{DoxyCompactList}\item 
+\Hypertarget{classVector3f_a4229d0a2c69c1daa614b895169ef235e}\label{classVector3f_a4229d0a2c69c1daa614b895169ef235e} 
+void {\bfseries set\+\_\+y} (float new\+\_\+y)
+\begin{DoxyCompactList}\small\item\em change la valeur de y \end{DoxyCompactList}\item 
+\Hypertarget{classVector3f_a5962de70d5f7c146a0fec21abd988d25}\label{classVector3f_a5962de70d5f7c146a0fec21abd988d25} 
+void {\bfseries set\+\_\+z} (float new\+\_\+z)
+\begin{DoxyCompactList}\small\item\em change la valeur de z \end{DoxyCompactList}\item 
+\Hypertarget{classVector3f_a291b3faa1de96e43d33967c0dc262ce8}\label{classVector3f_a291b3faa1de96e43d33967c0dc262ce8} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&vec) const
+\item 
+\Hypertarget{classVector3f_a097ad30574bdd0a5f0384e9b56ae0e2f}\label{classVector3f_a097ad30574bdd0a5f0384e9b56ae0e2f} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \& {\bfseries clamp} (float min\+\_\+val, float max\+\_\+val)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classVector3f_aef5b816914d9115c3d75bdee4b2246eb}\label{classVector3f_aef5b816914d9115c3d75bdee4b2246eb} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (float scalar, const \mbox{\hyperlink{classVector3f}{Vector3f}} \&vec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Représente un vecteur 3D. 
+
+Cette classe est utilisée pour manipuler des vecteurs 3D dans le cadre de calculs mathématiques liés au lancer de rayons. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVector3f_a1b14b77d2503c1b1ca1363163ff55432}\label{classVector3f_a1b14b77d2503c1b1ca1363163ff55432} 
+\index{Vector3f@{Vector3f}!Vector3f@{Vector3f}}
+\index{Vector3f@{Vector3f}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{Vector3f()}{Vector3f()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Vector3f\+::\+Vector3f (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut. 
+
+Initialise le vecteur à (0, 0, 0). \Hypertarget{classVector3f_a71033a308401bb8950d846a012d13da8}\label{classVector3f_a71033a308401bb8950d846a012d13da8} 
+\index{Vector3f@{Vector3f}!Vector3f@{Vector3f}}
+\index{Vector3f@{Vector3f}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{Vector3f()}{Vector3f()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector3f\+::\+Vector3f (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordonnée 1 du vecteur \\
+\hline
+{\em y} & coordonnée 2 du vecteur \\
+\hline
+{\em Z} & coordonnée 3 du vecteur Initialise le vecteur à (0, 0, 0). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVector3f_a7f46374a269ea4747c60e5eb1e1dc289}\label{classVector3f_a7f46374a269ea4747c60e5eb1e1dc289} 
+\index{Vector3f@{Vector3f}!dot@{dot}}
+\index{dot@{dot}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily float Vector3f\+::dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Calcule le produit scalaire avec un autre vecteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Le vecteur avec lequel effectuer le produit scalaire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le produit scalaire (un scalaire). 
+\end{DoxyReturn}
+\Hypertarget{classVector3f_a76759eb4a7879906441ed9ad7385e4c3}\label{classVector3f_a76759eb4a7879906441ed9ad7385e4c3} 
+\index{Vector3f@{Vector3f}!getX@{getX}}
+\index{getX@{getX}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily float Vector3f\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient la coordonnée X du vecteur. 
+
+\begin{DoxyReturn}{Returns}
+La coordonnée X. 
+\end{DoxyReturn}
+\Hypertarget{classVector3f_a2cf82f229b7d7d5398d7c9fd453a0fbc}\label{classVector3f_a2cf82f229b7d7d5398d7c9fd453a0fbc} 
+\index{Vector3f@{Vector3f}!getY@{getY}}
+\index{getY@{getY}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily float Vector3f\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient la coordonnée Y du vecteur. 
+
+\begin{DoxyReturn}{Returns}
+La coordonnée Y. 
+\end{DoxyReturn}
+\Hypertarget{classVector3f_a0a87d639c7172d1c9eea7fac74f5e6ae}\label{classVector3f_a0a87d639c7172d1c9eea7fac74f5e6ae} 
+\index{Vector3f@{Vector3f}!getZ@{getZ}}
+\index{getZ@{getZ}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{getZ()}{getZ()}}
+{\footnotesize\ttfamily float Vector3f\+::getZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient la coordonnée Z du vecteur. 
+
+\begin{DoxyReturn}{Returns}
+La coordonnée Z. 
+\end{DoxyReturn}
+\Hypertarget{classVector3f_add91fe15e5acc01b2724bf4b9628a638}\label{classVector3f_add91fe15e5acc01b2724bf4b9628a638} 
+\index{Vector3f@{Vector3f}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{magnitude()}{magnitude()}}
+{\footnotesize\ttfamily float Vector3f\+::magnitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+calcul la norme du vecteur. 
+
+\begin{DoxyReturn}{Returns}
+renvoie la norme du vecteur 
+\end{DoxyReturn}
+\Hypertarget{classVector3f_ad0a7aee39e7423d2261931b08d98b12e}\label{classVector3f_ad0a7aee39e7423d2261931b08d98b12e} 
+\index{Vector3f@{Vector3f}!normalize@{normalize}}
+\index{normalize@{normalize}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3f}{Vector3f}} Vector3f\+::normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Normalise le vecteur. 
+
+\begin{DoxyReturn}{Returns}
+Un vecteur normalisé (de longueur 1). 
+\end{DoxyReturn}
+\Hypertarget{classVector3f_a2311608a5a05790838264f552dea72eb}\label{classVector3f_a2311608a5a05790838264f552dea72eb} 
+\index{Vector3f@{Vector3f}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3f}{Vector3f}} Vector3f\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{float}]{scalar }\end{DoxyParamCaption}) const}
+
+
+
+Multiplie le vecteur par un scalaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & Le scalaire par lequel multiplier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un nouveau vecteur résultant de la multiplication. 
+\end{DoxyReturn}
+\Hypertarget{classVector3f_aed35d6f067aa95eb8d809403b763b1b4}\label{classVector3f_aed35d6f067aa95eb8d809403b763b1b4} 
+\index{Vector3f@{Vector3f}!operator+@{operator+}}
+\index{operator+@{operator+}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3f}{Vector3f}} Vector3f\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Additionne deux vecteurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Le vecteur à ajouter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un nouveau vecteur résultant de l\textquotesingle{}addition. 
+\end{DoxyReturn}
+\Hypertarget{classVector3f_a0ed76726faa48d506513168b64481d52}\label{classVector3f_a0ed76726faa48d506513168b64481d52} 
+\index{Vector3f@{Vector3f}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vector3f@{Vector3f}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3f}{Vector3f}} Vector3f\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Soustrait deux vecteurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Le vecteur à soustraire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un nouveau vecteur résultant de la soustraction. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+vector3f.\+hpp\item 
+vector3f.\+cpp\end{DoxyCompactItemize}

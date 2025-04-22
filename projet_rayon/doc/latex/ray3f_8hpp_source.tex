@@ -1,0 +1,40 @@
+\doxysection{ray3f.\+hpp}
+\hypertarget{ray3f_8hpp_source}{}\label{ray3f_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RAY3F\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RAY3F\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <sstream>}\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}vector3f.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRay3f}{Ray3f}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ origin\_\ ;\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ direction\_\ ;\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ public\ :\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \mbox{\hyperlink{classRay3f_a645b4f2a2f3106b03e9dfca21c062236}{Ray3f}}()\ \ ;\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRay3f_a645b4f2a2f3106b03e9dfca21c062236}{Ray3f}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ origin\ ,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ direction)\ ;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classRay3f}{\string~Ray3f}}()\ =\ default\ ;\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//getters\ \ d\ autres\ methodes\ ?\ \ \ }}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classRay3f_ad8116a66426db3c0c85133f521e91c42}{point\_at}}(\textcolor{keywordtype}{float}\ t)\ \textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ get\_origin()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ origin\_\ ;\}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ get\_direction()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ direction\_\ ;\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \}\ ;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

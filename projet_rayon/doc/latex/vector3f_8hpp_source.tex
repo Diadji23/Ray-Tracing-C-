@@ -1,0 +1,61 @@
+\doxysection{vector3f.\+hpp}
+\hypertarget{vector3f_8hpp_source}{}\label{vector3f_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VECTOR3F\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VECTOR3F\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVector3f}{Vector3f}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ x;\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ y;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ z;\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classVector3f_a1b14b77d2503c1b1ca1363163ff55432}{Vector3f}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classVector3f_a1b14b77d2503c1b1ca1363163ff55432}{Vector3f}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classVector3f_a76759eb4a7879906441ed9ad7385e4c3}{getX}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classVector3f_a2cf82f229b7d7d5398d7c9fd453a0fbc}{getY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classVector3f_a0a87d639c7172d1c9eea7fac74f5e6ae}{getZ}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classVector3f_aed35d6f067aa95eb8d809403b763b1b4}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classVector3f_a0ed76726faa48d506513168b64481d52}{operator-\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classVector3f_a2311608a5a05790838264f552dea72eb}{operator*}}(\textcolor{keywordtype}{float}\ scalar)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ ;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classVector3f_a7f46374a269ea4747c60e5eb1e1dc289}{dot}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ cross(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ other)\ \textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classVector3f_ad0a7aee39e7423d2261931b08d98b12e}{normalize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classVector3f_add91fe15e5acc01b2724bf4b9628a638}{magnitude}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVector3f_a56dbcea6d73240960678ac1616e916b5}{set\_x}}(\textcolor{keywordtype}{float}\ new\_x)\ \{\ x\ =\ new\_x;\ \}\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVector3f_a4229d0a2c69c1daa614b895169ef235e}{set\_y}}(\textcolor{keywordtype}{float}\ new\_y)\ \{\ y\ =\ new\_y;\ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVector3f_a5962de70d5f7c146a0fec21abd988d25}{set\_z}}(\textcolor{keywordtype}{float}\ new\_z)\ \{\ z\ =\ new\_z;\ \}\ }
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ operator*(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ vec)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ clamp(\textcolor{keywordtype}{float}\ min\_val,\ \textcolor{keywordtype}{float}\ max\_val);}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\ operator*(\textcolor{keywordtype}{float}\ scalar,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ vec);}
+\DoxyCodeLine{00132\ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

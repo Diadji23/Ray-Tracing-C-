@@ -1,0 +1,58 @@
+\doxysection{material.\+hpp}
+\hypertarget{material_8hpp_source}{}\label{material_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MATERIAL\_HPP\ }}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MATERIAL\_HPP\ }}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}vector3f.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMaterial}{Material}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ private\ :\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ ka\_;\ \textcolor{comment}{//\ Coefficient\ de\ réflexion\ ambiante}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ kd\_;\ \textcolor{comment}{//\ Coefficient\ de\ réflexion\ diffuse}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ ks\_;\ \textcolor{comment}{//\ Coefficient\ de\ réflexion\ spéculaire}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vector3f\ color\_\ ;\ //couleur\ du\ materiau}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ shininess\_\ ;\ \textcolor{comment}{//\ brillance\ du\ materiau\ (entre\ 0\ et\ 1\ )}}
+\DoxyCodeLine{00022\ \ \ \ \ public\ :\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMaterial_a137e987401b63eb7c6c27c3e38bc74b5}{Material}}()\ ;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMaterial_a137e987401b63eb7c6c27c3e38bc74b5}{Material}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ ka,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ kd,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ ks,\ \textcolor{keywordtype}{float}\ shininess)\ ;\ \ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ \ \ \ *@brief\ Accede\ à\ la\ couleur\ du\ materiau\ }}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ \ \ \ *@return\ Vector3f\ la\ couleur\ du\ materiau\ }}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ get\_color()\ \textcolor{keyword}{const}\ ;\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaterial_abf2d88ba486099ac79770a641ceeb70a}{set\_color}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ color)\ \ ;\ }
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMaterial_a9600689abca05c8aee99ae712032a586}{get\_shininess}}()\ \textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaterial_a35a4e2df48624bd5531421a495131b36}{set\_shininess}}(\textcolor{keywordtype}{float}\ shininess);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//nouveau\ }}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classMaterial_a2ba9f7de5bcf660ab0b4cddec8b3d7ce}{get\_ambient}}()\ \textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classMaterial_a93a15c5f61170b61ea30585b089d7d18}{get\_diffuse}}()\ \textcolor{keyword}{const}\ \ ;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaterial_a97297236ffebda551eb8350ba25c3a2b}{set\_ambient}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ ka)\ ;\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classMaterial_ab3b05e0bac2ebc5d5f80ca4f9805b393}{get\_specular}}()\ \textcolor{keyword}{const}\ ;\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ set\_specular(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ ks)\ ;\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ set\_diffuse(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ kd)\ ;\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \};\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

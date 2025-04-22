@@ -1,0 +1,133 @@
+\doxysection{Material Class Reference}
+\hypertarget{classMaterial}{}\label{classMaterial}\index{Material@{Material}}
+
+
+Représente les propriétés d\textquotesingle{}un matériau dans un espace 3D.  
+
+
+
+
+{\ttfamily \#include $<$material.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMaterial_a137e987401b63eb7c6c27c3e38bc74b5}{Material}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMaterial_a25f62bf065ee995e9ddc90f8befd2443}{Material}} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&ka, const \mbox{\hyperlink{classVector3f}{Vector3f}} \&kd, const \mbox{\hyperlink{classVector3f}{Vector3f}} \&ks, float shininess)
+\begin{DoxyCompactList}\small\item\em Constructeur avec paramètres. \end{DoxyCompactList}\item 
+\Hypertarget{classMaterial_a090f7c29a8b2ae18c74742ef74fb5d9d}\label{classMaterial_a090f7c29a8b2ae18c74742ef74fb5d9d} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries get\+\_\+color} () const
+\item 
+void \mbox{\hyperlink{classMaterial_abf2d88ba486099ac79770a641ceeb70a}{set\+\_\+color}} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&color)
+\begin{DoxyCompactList}\small\item\em Définit la couleur du matériau. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classMaterial_a9600689abca05c8aee99ae712032a586}{get\+\_\+shininess}} () const
+\begin{DoxyCompactList}\small\item\em Accède à la brillance du matériau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaterial_a35a4e2df48624bd5531421a495131b36}{set\+\_\+shininess}} (float shininess)
+\begin{DoxyCompactList}\small\item\em Définit la brillance du matériau. \end{DoxyCompactList}\item 
+\Hypertarget{classMaterial_a2ba9f7de5bcf660ab0b4cddec8b3d7ce}\label{classMaterial_a2ba9f7de5bcf660ab0b4cddec8b3d7ce} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries get\+\_\+ambient} () const
+\begin{DoxyCompactList}\small\item\em retourne le coef ambiant \end{DoxyCompactList}\item 
+\Hypertarget{classMaterial_a93a15c5f61170b61ea30585b089d7d18}\label{classMaterial_a93a15c5f61170b61ea30585b089d7d18} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries get\+\_\+diffuse} () const
+\begin{DoxyCompactList}\small\item\em retourne le coef diffuse ~\newline
+ \end{DoxyCompactList}\item 
+\Hypertarget{classMaterial_a97297236ffebda551eb8350ba25c3a2b}\label{classMaterial_a97297236ffebda551eb8350ba25c3a2b} 
+void {\bfseries set\+\_\+ambient} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&ka)
+\begin{DoxyCompactList}\small\item\em met en place le coef ambiant \end{DoxyCompactList}\item 
+\Hypertarget{classMaterial_ab3b05e0bac2ebc5d5f80ca4f9805b393}\label{classMaterial_ab3b05e0bac2ebc5d5f80ca4f9805b393} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries get\+\_\+specular} () const
+\begin{DoxyCompactList}\small\item\em retourne le coef spéculaire \end{DoxyCompactList}\item 
+\Hypertarget{classMaterial_a3051bdaae5301d9761923499f3977db8}\label{classMaterial_a3051bdaae5301d9761923499f3977db8} 
+void {\bfseries set\+\_\+specular} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&ks)
+\item 
+\Hypertarget{classMaterial_aeda69d67839145bb42af66b8f91a7d15}\label{classMaterial_aeda69d67839145bb42af66b8f91a7d15} 
+void {\bfseries set\+\_\+diffuse} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&kd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Représente les propriétés d\textquotesingle{}un matériau dans un espace 3D. 
+
+Un matériau est défini par une couleur (vecteur RGB) et une propriété de brillance (entre 0 et 1) pour les réflexions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMaterial_a137e987401b63eb7c6c27c3e38bc74b5}\label{classMaterial_a137e987401b63eb7c6c27c3e38bc74b5} 
+\index{Material@{Material}!Material@{Material}}
+\index{Material@{Material}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{Material()}{Material()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Material\+::\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut. 
+
+Initialise un matériau noir (RGB = (0, 0, 0)) avec une brillance nulle. \Hypertarget{classMaterial_a25f62bf065ee995e9ddc90f8befd2443}\label{classMaterial_a25f62bf065ee995e9ddc90f8befd2443} 
+\index{Material@{Material}!Material@{Material}}
+\index{Material@{Material}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{Material()}{Material()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Material\+::\+Material (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{ka,  }\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{kd,  }\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{ks,  }\item[{float}]{shininess }\end{DoxyParamCaption})}
+
+
+
+Constructeur avec paramètres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Couleur du matériau (vecteur RGB). \\
+\hline
+{\em shininess} & Brillance du matériau (doit être entre 0 et 1). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMaterial_a9600689abca05c8aee99ae712032a586}\label{classMaterial_a9600689abca05c8aee99ae712032a586} 
+\index{Material@{Material}!get\_shininess@{get\_shininess}}
+\index{get\_shininess@{get\_shininess}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{get\_shininess()}{get\_shininess()}}
+{\footnotesize\ttfamily float Material\+::get\+\_\+shininess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accède à la brillance du matériau. 
+
+\begin{DoxyReturn}{Returns}
+float La brillance (entre 0 et 1). 
+\end{DoxyReturn}
+\Hypertarget{classMaterial_abf2d88ba486099ac79770a641ceeb70a}\label{classMaterial_abf2d88ba486099ac79770a641ceeb70a} 
+\index{Material@{Material}!set\_color@{set\_color}}
+\index{set\_color@{set\_color}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{set\_color()}{set\_color()}}
+{\footnotesize\ttfamily void Material\+::set\+\_\+color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Définit la couleur du matériau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & La nouvelle couleur (vecteur RGB). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMaterial_a35a4e2df48624bd5531421a495131b36}\label{classMaterial_a35a4e2df48624bd5531421a495131b36} 
+\index{Material@{Material}!set\_shininess@{set\_shininess}}
+\index{set\_shininess@{set\_shininess}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{set\_shininess()}{set\_shininess()}}
+{\footnotesize\ttfamily void Material\+::set\+\_\+shininess (\begin{DoxyParamCaption}\item[{float}]{shininess }\end{DoxyParamCaption})}
+
+
+
+Définit la brillance du matériau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shininess} & La nouvelle brillance (doit être entre 0 et 1). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+material.\+hpp\item 
+material.\+cpp\end{DoxyCompactItemize}

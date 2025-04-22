@@ -1,0 +1,32 @@
+\doxysection{sdl.\+hpp}
+\hypertarget{sdl_8hpp_source}{}\label{sdl_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SDL\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SDL\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}vector3f.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSdl}{Sdl}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Renderer\ SDL.}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ width\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ height\_;\ \ }
+\DoxyCodeLine{00018\ \ \ \ \ SDL\_Window*\ window\_;\ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ SDL\_Renderer*\ renderer\_;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classSdl}{Sdl}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keyword}{const}\ std::string\&\ title);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classSdl_a855bbadc37c0f1e224fb1c8c1ab579d4}{\string~Sdl}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSdl_abfad02f542578e40d8b320e0016652e2}{render}}(\textcolor{keyword}{const}\ std::vector<std::vector<Vector3f>>\&\ image);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSdl_ae18d51c39e437e6b5a5f0f5ca1897df0}{handle\_events}}();}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

@@ -1,0 +1,117 @@
+\doxysection{Scene Class Reference}
+\hypertarget{classScene}{}\label{classScene}\index{Scene@{Scene}}
+
+
+represente une scene avec une caméra , des objets , et une source elle gere tous les éléments nécessaires pour produire une image en utilisant l\textquotesingle{}algorithme de tracé de rayon  
+
+
+
+
+{\ttfamily \#include $<$scene.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classScene_a70622e2ce4062a2bbca1e8f12ed4f351}{add\+\_\+object}} (\mbox{\hyperlink{classShape}{Shape}} \texorpdfstring{$\ast$}{*}shape)
+\begin{DoxyCompactList}\small\item\em Ajoute un objet à la scène. \end{DoxyCompactList}\item 
+\Hypertarget{classScene_ab9e5446478b3c6d64d21eec479720160}\label{classScene_ab9e5446478b3c6d64d21eec479720160} 
+void {\bfseries set\+\_\+source} (const \mbox{\hyperlink{classRay3f}{Ray3f}} \&source)
+\begin{DoxyCompactList}\small\item\em Définit la source pour la scène. \end{DoxyCompactList}\item 
+\Hypertarget{classScene_a9c3a6c212ccc3a248b603cd6a89a9e8b}\label{classScene_a9c3a6c212ccc3a248b603cd6a89a9e8b} 
+void {\bfseries set\+\_\+camera} (const \mbox{\hyperlink{classCamera}{Camera}} \&cam)
+\begin{DoxyCompactList}\small\item\em Définit la caméra pour la scène. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRay3f}{Ray3f}} \& \mbox{\hyperlink{classScene_a66ade8718e9567eb74997316d2c2bac8}{get\+\_\+source}} () const
+\begin{DoxyCompactList}\small\item\em Retourne la source lumineuse de la scène. \end{DoxyCompactList}\item 
+\Hypertarget{classScene_aee7bc152f6734dcb7d28ea0a1b965bbd}\label{classScene_aee7bc152f6734dcb7d28ea0a1b965bbd} 
+const \mbox{\hyperlink{classCamera}{Camera}} \& {\bfseries get\+\_\+camera} () const
+\begin{DoxyCompactList}\small\item\em Retourne la caméra utilisée dans la scène. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classShape}{Shape}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{classScene_a7aa4033f2199f78e6ea8ff992d778812}{get\+\_\+object}} ()
+\begin{DoxyCompactList}\small\item\em Retourne les objets de la scène. \end{DoxyCompactList}\item 
+\Hypertarget{classScene_ad18dfb6e5487b03783205917b6fcd8f1}\label{classScene_ad18dfb6e5487b03783205917b6fcd8f1} 
+const \mbox{\hyperlink{classCamera}{Camera}} \& {\bfseries get\+\_\+camera} (const \mbox{\hyperlink{classCamera}{Camera}} \&cam) const
+\item 
+\Hypertarget{classScene_aad7bb09d0ac087fe5bc04b2f4816e995}\label{classScene_aad7bb09d0ac087fe5bc04b2f4816e995} 
+void {\bfseries add\+\_\+light} (const \mbox{\hyperlink{structLight}{Light}} \&light)
+\item 
+\Hypertarget{classScene_a88df0d6d9dd1d6dbf9f282d81f23ba4f}\label{classScene_a88df0d6d9dd1d6dbf9f282d81f23ba4f} 
+void {\bfseries render} (int width, int height, const std\+::string \&output\+File) const
+\item 
+void \mbox{\hyperlink{classScene_a772e3566b1efdd4b64443117622286c6}{render\+\_\+to\+\_\+image}} (int width, int height, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classVector3f}{Vector3f}} $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Génère une matrice de couleurs représentant l\textquotesingle{}image. \end{DoxyCompactList}\item 
+\Hypertarget{classScene_abdf29559987bf7c3a65b835e75fd2d65}\label{classScene_abdf29559987bf7c3a65b835e75fd2d65} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries compute\+\_\+shading} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&point, const \mbox{\hyperlink{classVector3f}{Vector3f}} \&normal, const \mbox{\hyperlink{classMaterial}{Material}} \&material, const \mbox{\hyperlink{classRay3f}{Ray3f}} \&ray) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+represente une scene avec une caméra , des objets , et une source elle gere tous les éléments nécessaires pour produire une image en utilisant l\textquotesingle{}algorithme de tracé de rayon 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classScene_a70622e2ce4062a2bbca1e8f12ed4f351}\label{classScene_a70622e2ce4062a2bbca1e8f12ed4f351} 
+\index{Scene@{Scene}!add\_object@{add\_object}}
+\index{add\_object@{add\_object}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{add\_object()}{add\_object()}}
+{\footnotesize\ttfamily void Scene\+::add\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classShape}{Shape}} \texorpdfstring{$\ast$}{*}}]{shape }\end{DoxyParamCaption})}
+
+
+
+Ajoute un objet à la scène. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & Pointeur vers un objet dérivé de \doxylink{classShape}{Shape}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classScene_a7aa4033f2199f78e6ea8ff992d778812}\label{classScene_a7aa4033f2199f78e6ea8ff992d778812} 
+\index{Scene@{Scene}!get\_object@{get\_object}}
+\index{get\_object@{get\_object}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{get\_object()}{get\_object()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classShape}{Shape}} \texorpdfstring{$\ast$}{*} $>$ \& Scene\+::get\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne les objets de la scène. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$\+Shape\texorpdfstring{$\ast$}{*}$>$\& Liste des objets de la scène. 
+\end{DoxyReturn}
+\Hypertarget{classScene_a66ade8718e9567eb74997316d2c2bac8}\label{classScene_a66ade8718e9567eb74997316d2c2bac8} 
+\index{Scene@{Scene}!get\_source@{get\_source}}
+\index{get\_source@{get\_source}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{get\_source()}{get\_source()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classRay3f}{Ray3f}} \& Scene\+::get\+\_\+source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne la source lumineuse de la scène. 
+
+Retourne la source lumineuse.
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRay3f}{Ray3f}\& La source lumineuse. 
+\end{DoxyReturn}
+\Hypertarget{classScene_a772e3566b1efdd4b64443117622286c6}\label{classScene_a772e3566b1efdd4b64443117622286c6} 
+\index{Scene@{Scene}!render\_to\_image@{render\_to\_image}}
+\index{render\_to\_image@{render\_to\_image}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{render\_to\_image()}{render\_to\_image()}}
+{\footnotesize\ttfamily void Scene\+::render\+\_\+to\+\_\+image (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classVector3f}{Vector3f}} $>$ $>$ \&}]{image }\end{DoxyParamCaption}) const}
+
+
+
+Génère une matrice de couleurs représentant l\textquotesingle{}image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Largeur de l\textquotesingle{}image. \\
+\hline
+{\em height} & Hauteur de l\textquotesingle{}image. \\
+\hline
+{\em image} & Matrice de couleurs à remplir. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+scene.\+hpp\item 
+scene.\+cpp\end{DoxyCompactItemize}

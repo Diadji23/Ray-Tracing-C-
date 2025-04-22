@@ -1,0 +1,165 @@
+\doxysection{Sphere Class Reference}
+\hypertarget{classSphere}{}\label{classSphere}\index{Sphere@{Sphere}}
+
+
+Représente une sphère dans la scène.  
+
+
+
+
+{\ttfamily \#include $<$sphere.\+hpp$>$}
+
+
+
+Inheritance diagram for Sphere\+:
+% FIG 0
+
+
+Collaboration diagram for Sphere\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSphere_a9c40030b7816c104f92cbaefbcf897f8}{Sphere}} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&origin, float radius, const \mbox{\hyperlink{classMaterial}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classSphere}{Sphere}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSphere_a6c71760340b6f81274c456ccddf404d4}{is\+Hit}} (const \mbox{\hyperlink{classRay3f}{Ray3f}} \&ray, float \&t, \mbox{\hyperlink{classVector3f}{Vector3f}} \&intersection\+\_\+point, \mbox{\hyperlink{classVector3f}{Vector3f}} \&normal) const override
+\begin{DoxyCompactList}\small\item\em Teste si un rayon6 intersecte la forme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMaterial}{Material}} \mbox{\hyperlink{classSphere_a668291258a148707b469ec06a7b8894b}{get\+\_\+material}} () const override
+\begin{DoxyCompactList}\small\item\em Retourne le matériau associé à la forme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \mbox{\hyperlink{classSphere_a2881ae492c9247f2af95fb3283c725b8}{reflect}} (const \mbox{\hyperlink{classRay3f}{Ray3f}} \&ray, const \mbox{\hyperlink{classVector3f}{Vector3f}} \&point) const override
+\begin{DoxyCompactList}\small\item\em calcule le rayon réfléchie de ray. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \mbox{\hyperlink{classSphere_a3a327f0cda91b7f1f5218cf186cff64f}{get\+\_\+origin}} () const override
+\item 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \mbox{\hyperlink{classSphere_a7709599ede34818b162df34d775a8aaf}{get\+\_\+height}} () const override
+\item 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \mbox{\hyperlink{classSphere_a30763a9ae0417719184cf473ed0521c1}{get\+\_\+width}} () const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Représente une sphère dans la scène. 
+
+Une sphère est définie par son centre, son rayon et son matériau. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSphere_a9c40030b7816c104f92cbaefbcf897f8}\label{classSphere_a9c40030b7816c104f92cbaefbcf897f8} 
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}}
+{\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{origin,  }\item[{float}]{radius,  }\item[{const \mbox{\hyperlink{classMaterial}{Material}} \&}]{material }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classSphere}{Sphere}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Le centre de la sphère. \\
+\hline
+{\em radius} & Le rayon de la sphère. \\
+\hline
+{\em material} & Le matériau de la sphère. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSphere_a7709599ede34818b162df34d775a8aaf}\label{classSphere_a7709599ede34818b162df34d775a8aaf} 
+\index{Sphere@{Sphere}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3f}{Vector3f}} Sphere\+::get\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classShape}{Shape}}.
+
+\Hypertarget{classSphere_a668291258a148707b469ec06a7b8894b}\label{classSphere_a668291258a148707b469ec06a7b8894b} 
+\index{Sphere@{Sphere}!get\_material@{get\_material}}
+\index{get\_material@{get\_material}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{get\_material()}{get\_material()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMaterial}{Material}} Sphere\+::get\+\_\+material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retourne le matériau associé à la forme. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classMaterial}{Material} Le matériau de la forme. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classShape_a7a2e5c3c7017e6765f0fe9110256f7c5}{Shape}}.
+
+\Hypertarget{classSphere_a3a327f0cda91b7f1f5218cf186cff64f}\label{classSphere_a3a327f0cda91b7f1f5218cf186cff64f} 
+\index{Sphere@{Sphere}!get\_origin@{get\_origin}}
+\index{get\_origin@{get\_origin}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{get\_origin()}{get\_origin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3f}{Vector3f}} Sphere\+::get\+\_\+origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classShape}{Shape}}.
+
+\Hypertarget{classSphere_a30763a9ae0417719184cf473ed0521c1}\label{classSphere_a30763a9ae0417719184cf473ed0521c1} 
+\index{Sphere@{Sphere}!get\_width@{get\_width}}
+\index{get\_width@{get\_width}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{get\_width()}{get\_width()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3f}{Vector3f}} Sphere\+::get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classShape}{Shape}}.
+
+\Hypertarget{classSphere_a6c71760340b6f81274c456ccddf404d4}\label{classSphere_a6c71760340b6f81274c456ccddf404d4} 
+\index{Sphere@{Sphere}!isHit@{isHit}}
+\index{isHit@{isHit}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{isHit()}{isHit()}}
+{\footnotesize\ttfamily bool Sphere\+::is\+Hit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRay3f}{Ray3f}} \&}]{ray,  }\item[{float \&}]{t,  }\item[{\mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{intersection\+\_\+point,  }\item[{\mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{normal }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Teste si un rayon6 intersecte la forme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & Le rayon à tester. \\
+\hline
+{\em hit\+Point} & Le point d\textquotesingle{}intersection, si trouvé. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si une intersection est trouvée, sinon {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classShape_a5e85038a656e26bc963cb655d209274d}{Shape}}.
+
+\Hypertarget{classSphere_a2881ae492c9247f2af95fb3283c725b8}\label{classSphere_a2881ae492c9247f2af95fb3283c725b8} 
+\index{Sphere@{Sphere}!reflect@{reflect}}
+\index{reflect@{reflect}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{reflect()}{reflect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3f}{Vector3f}} Sphere\+::reflect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRay3f}{Ray3f}} \&}]{ray,  }\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{point }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+calcule le rayon réfléchie de ray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & Le rayon dont on calcule le rayon réfléchie. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le rayon réfléchie 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classShape_aa19aa8bf1e30522320afd1870b5ca2aa}{Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sphere.\+hpp\item 
+sphere.\+cpp\end{DoxyCompactItemize}

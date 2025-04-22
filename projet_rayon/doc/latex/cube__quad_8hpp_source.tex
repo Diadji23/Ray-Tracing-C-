@@ -1,0 +1,49 @@
+\doxysection{cube\+\_\+quad.\+hpp}
+\hypertarget{cube__quad_8hpp_source}{}\label{cube__quad_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CUBE\_QUAD\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CUBE\_QUAD\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}shape.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}vector3f.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}ray3f.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}material.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00012\ \textcolor{comment}{*@class\ Cub\_quad\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{@brief\ Représente\ un\ quadrilatère\ dans\ un\ espace\ 3D}}
+\DoxyCodeLine{00014\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCub__quad}{Cub\_quad}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classShape}{Shape}}\{}
+\DoxyCodeLine{00018\ \ \ \ \ private\ :}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ origin\_\ ;\ \textcolor{comment}{//\ origine\ du\ quad\ (un\ coin\ )}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ width\_\ ;\ \textcolor{comment}{//\ largeur\ du\ quad\ }}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ height\_\ ;\ \textcolor{comment}{//\ longueur\ su\ quad\ }}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMaterial}{Material}}\ material\_\ ;\ \textcolor{comment}{//\ Materiau\ associé\ au\ quadrilatere}}
+\DoxyCodeLine{00023\ \ \ \ \ public\ :\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCub__quad}{Cub\_quad}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ origin,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ width\ ,\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ \ height,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMaterial}{Material}}\&\ material\ )\ ;\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ \ \ \ *@brief\ vérifie\ si\ un\ rayon\ intersecte\ un\ quadrilatère\ défini\ dans\ un\ plan}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ @param\ ray\ Le\ rayon\ à\ tester\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ @param\ t\ Distance\ à\ l'intersection\ ,\ si\ elle\ existe}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ @\ true\ si\ intersection\ ,\ false\ sinon}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCub__quad_a5acf995ddcb79221dfbe32cd7318bb4f}{isHit}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRay3f}{Ray3f}}\&\ ray,\ \textcolor{keywordtype}{float}\&\ t,\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ intersection\_point,\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ normal)\ \textcolor{keyword}{const\ override}\ ;\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMaterial}{Material}}\ \mbox{\hyperlink{classCub__quad_ae0e0623b8099a9c5325bb7617cb18f0c}{get\_material}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classCub__quad_a37cba4d8827fdbb1fb64369e7a58bd27}{reflect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRay3f}{Ray3f}}\&\ ray,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ point)\ \textcolor{keyword}{const\ override}\ ;\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ get\_origin()\ \textcolor{keyword}{const\ override}\ ;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ get\_height()\ \textcolor{keyword}{const\ override}\ ;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ get\_width()\ \textcolor{keyword}{const\ override}\ ;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \}\ ;}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

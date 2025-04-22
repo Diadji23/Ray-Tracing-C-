@@ -1,0 +1,31 @@
+\doxysection{shape.\+hpp}
+\hypertarget{shape_8hpp_source}{}\label{shape_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SHAPE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SHAPE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}vector3f.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ray3f.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}material.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classShape}{Shape}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \ \mbox{\hyperlink{classShape_a5e85038a656e26bc963cb655d209274d}{isHit}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRay3f}{Ray3f}}\&\ ray,\ \textcolor{keywordtype}{float}\&\ t,\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ intersection\_point,\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ normal)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMaterial}{Material}}\ \mbox{\hyperlink{classShape_a7a2e5c3c7017e6765f0fe9110256f7c5}{get\_material}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\ \mbox{\hyperlink{classShape_aa19aa8bf1e30522320afd1870b5ca2aa}{reflect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRay3f}{Ray3f}}\&\ ray,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\&\ point)\ \textcolor{keyword}{const}\ =\ 0;\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\ get\_origin()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classVector3f}{Vector3f}}\ get\_height()\ \textcolor{keyword}{const}=\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{classVector3f}{Vector3f}}\ get\_width()\ \textcolor{keyword}{const}\ =\ 0\ ;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classShape}{\string~Shape}}()=\ default\ ;\ }
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00053\ }
+
+\end{DoxyCode}

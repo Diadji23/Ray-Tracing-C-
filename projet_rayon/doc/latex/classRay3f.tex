@@ -1,0 +1,88 @@
+\doxysection{Ray3f Class Reference}
+\hypertarget{classRay3f}{}\label{classRay3f}\index{Ray3f@{Ray3f}}
+
+
+représente un rayon dans un espace 3D un rayon est défini par une origine et une direction on normalise la direction pour garantir la precision des calculs  
+
+
+
+
+{\ttfamily \#include $<$ray3f.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRay3f_a645b4f2a2f3106b03e9dfca21c062236}{Ray3f}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRay3f_ae172754e0327f646d34aac29c50faf02}{Ray3f}} (const \mbox{\hyperlink{classVector3f}{Vector3f}} \&origin, const \mbox{\hyperlink{classVector3f}{Vector3f}} \&direction)
+\begin{DoxyCompactList}\small\item\em Constructeur avec une origine et une direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3f}{Vector3f}} \mbox{\hyperlink{classRay3f_ad8116a66426db3c0c85133f521e91c42}{point\+\_\+at}} (float t) const
+\begin{DoxyCompactList}\small\item\em Retourne un point à une distance donnée le long du rayon. \end{DoxyCompactList}\item 
+\Hypertarget{classRay3f_ab55bf9e6899f16a6c34c7fc4252840d0}\label{classRay3f_ab55bf9e6899f16a6c34c7fc4252840d0} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries get\+\_\+origin} () const
+\item 
+\Hypertarget{classRay3f_a059c7c19d51c13e7ea774470830b0bad}\label{classRay3f_a059c7c19d51c13e7ea774470830b0bad} 
+\mbox{\hyperlink{classVector3f}{Vector3f}} {\bfseries get\+\_\+direction} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+représente un rayon dans un espace 3D un rayon est défini par une origine et une direction on normalise la direction pour garantir la precision des calculs 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRay3f_a645b4f2a2f3106b03e9dfca21c062236}\label{classRay3f_a645b4f2a2f3106b03e9dfca21c062236} 
+\index{Ray3f@{Ray3f}!Ray3f@{Ray3f}}
+\index{Ray3f@{Ray3f}!Ray3f@{Ray3f}}
+\doxysubsubsection{\texorpdfstring{Ray3f()}{Ray3f()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ray3f\+::\+Ray3f (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut. 
+
+Initialise un rayon avec une origine (0, 0, 0) et une direction (1, 0, 0). \Hypertarget{classRay3f_ae172754e0327f646d34aac29c50faf02}\label{classRay3f_ae172754e0327f646d34aac29c50faf02} 
+\index{Ray3f@{Ray3f}!Ray3f@{Ray3f}}
+\index{Ray3f@{Ray3f}!Ray3f@{Ray3f}}
+\doxysubsubsection{\texorpdfstring{Ray3f()}{Ray3f()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ray3f\+::\+Ray3f (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{origin,  }\item[{const \mbox{\hyperlink{classVector3f}{Vector3f}} \&}]{direction }\end{DoxyParamCaption})}
+
+
+
+Constructeur avec une origine et une direction. 
+
+La direction est automatiquement normalisée.
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & Origine du rayon. \\
+\hline
+{\em direction} & Direction du rayon (sera normalisée). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRay3f_ad8116a66426db3c0c85133f521e91c42}\label{classRay3f_ad8116a66426db3c0c85133f521e91c42} 
+\index{Ray3f@{Ray3f}!point\_at@{point\_at}}
+\index{point\_at@{point\_at}!Ray3f@{Ray3f}}
+\doxysubsubsection{\texorpdfstring{point\_at()}{point\_at()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3f}{Vector3f}} Ray3f\+::point\+\_\+at (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Retourne un point à une distance donnée le long du rayon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Distance paramétrique le long du rayon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classVector3f}{Vector3f} Le point correspondant sur le rayon. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ray3f.\+hpp\item 
+ray3f.\+cpp\end{DoxyCompactItemize}

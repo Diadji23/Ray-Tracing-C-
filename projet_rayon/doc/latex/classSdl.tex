@@ -1,0 +1,85 @@
+\doxysection{Sdl Class Reference}
+\hypertarget{classSdl}{}\label{classSdl}\index{Sdl@{Sdl}}
+
+
+Gère l\textquotesingle{}affichage d\textquotesingle{}une image avec SDL.  
+
+
+
+
+{\ttfamily \#include $<$sdl.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSdl_a42ccec979a273cd2ef5023b17ac02efd}{Sdl}} (int width, int height, const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classSdl}{Sdl}. \end{DoxyCompactList}\item 
+\Hypertarget{classSdl_a855bbadc37c0f1e224fb1c8c1ab579d4}\label{classSdl_a855bbadc37c0f1e224fb1c8c1ab579d4} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Sdl} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classSdl}{Sdl}. Nettoie les ressources SDL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSdl_abfad02f542578e40d8b320e0016652e2}{render}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classVector3f}{Vector3f}} $>$ $>$ \&image)
+\begin{DoxyCompactList}\small\item\em Affiche une image en utilisant SDL. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSdl_ae18d51c39e437e6b5a5f0f5ca1897df0}{handle\+\_\+events}} ()
+\begin{DoxyCompactList}\small\item\em Gère la boucle d\textquotesingle{}événements SDL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gère l\textquotesingle{}affichage d\textquotesingle{}une image avec SDL. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSdl_a42ccec979a273cd2ef5023b17ac02efd}\label{classSdl_a42ccec979a273cd2ef5023b17ac02efd} 
+\index{Sdl@{Sdl}!Sdl@{Sdl}}
+\index{Sdl@{Sdl}!Sdl@{Sdl}}
+\doxysubsubsection{\texorpdfstring{Sdl()}{Sdl()}}
+{\footnotesize\ttfamily Sdl\+::\+Sdl (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classSdl}{Sdl}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Largeur de la fenêtre. \\
+\hline
+{\em height} & Hauteur de la fenêtre. \\
+\hline
+{\em title} & Titre de la fenêtre. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSdl_ae18d51c39e437e6b5a5f0f5ca1897df0}\label{classSdl_ae18d51c39e437e6b5a5f0f5ca1897df0} 
+\index{Sdl@{Sdl}!handle\_events@{handle\_events}}
+\index{handle\_events@{handle\_events}!Sdl@{Sdl}}
+\doxysubsubsection{\texorpdfstring{handle\_events()}{handle\_events()}}
+{\footnotesize\ttfamily bool Sdl\+::handle\+\_\+events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gère la boucle d\textquotesingle{}événements SDL. 
+
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}utilisateur continue, false s\textquotesingle{}il ferme la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{classSdl_abfad02f542578e40d8b320e0016652e2}\label{classSdl_abfad02f542578e40d8b320e0016652e2} 
+\index{Sdl@{Sdl}!render@{render}}
+\index{render@{render}!Sdl@{Sdl}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Sdl\+::render (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classVector3f}{Vector3f}} $>$ $>$ \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Affiche une image en utilisant SDL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Matrice de couleurs représentant l\textquotesingle{}image à afficher. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sdl.\+hpp\item 
+sdl.\+cpp\end{DoxyCompactItemize}
